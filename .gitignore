@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+*.bak*
+# runtime: never commit these
+ftmo_blank/state/
+ftmo_blank/runs/
+ftmo_blank/workspace/
+ftmo_blank/feed/
+ftmo_blank/journal/
+selfcall/runs/
+selfcall/state/
+selfcall/workspace/
+.env

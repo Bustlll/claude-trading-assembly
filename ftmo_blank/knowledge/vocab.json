@@ -1,0 +1,302 @@
+{
+ "_about": "THE DESK VOCABULARY (operator idea, 2026-10-18): one shared set of codes every worker -- training and live -- writes and reads, so a post, an alert plan or a journal note says exactly what it means in a few tokens, and nobody re-explains a setup in prose. `python3 tools/vocab.py index` lists every code, `lookup CODE ...` defines them, `find WORDS` searches. Setup records come from the training ledger (28 closed paper trades, Dec 2024 - May 2025): thin, one regime, mostly gold -- hypotheses with a track record, not proof.",
+ "grammar": {
+  "post": "SYM CODE SIDE @entry SL x TP y | trig | inv | note   e.g. XAUUSD S1 BUY @3302 SL 3294 TP 3320 | T-HOLD 3300 M15x2 | INV H1<3290 | TREND-UP ACCEPT>PDH",
+  "dismiss": "SYM DISMISS code[,code] | note   e.g. XAGEUR DISMISS A5,A4 | same metals move as XAGUSD, rollover pop",
+  "alert --why": "CODE SIDE @level SL x TP y | trig | inv   e.g. S2 SELL @3290 SL 3302 TP 3266 | T-REJECT 3290 M5 | INV M15>3305",
+  "rule": "codes first, prose only for what no code says; prices are real levels from the bars; tf after a level is the bar the trigger is judged on"
+ },
+ "terms": {
+  "S1": {
+   "cat": "setup",
+   "name": "ACCEPT-CONT",
+   "def": "Continuation after acceptance above a broken level (mirror for shorts). H1/H4 HH-HL; price broke a SWING-H and HELD above it 2h+ in a tight CONSOL that never lost the level.",
+   "entry": "inside/at the edge of the consolidation, not after a fresh IMPULSE away",
+   "stop": "under the consolidation low / the broken level",
+   "target": "2-2.7R, next swing or extension",
+   "record": "6 gold longs 6W ~+12R (Jan-Feb 2025 uptrend); same family lost 5x when entered mid-pullback before the HL (A2) or at a RANGE-H"
+  },
+  "S2": {
+   "cat": "setup",
+   "name": "FAILED-CTR",
+   "def": "Failed counter-move in a trend: a bounce (downtrend) or dip (uptrend) runs into a prior breakdown/breakout zone and FAILS -- LH (or HL) printed and a closed M15/M5 bar REJECTs back in the trend direction.",
+   "entry": "after the rejection close",
+   "stop": "just beyond the counter-move extreme",
+   "target": "~2R / the prior extreme",
+   "record": "3W (USDJPY +0.54R, US100 +2.25R, gold short +1.42R); lost when sold before the bounce had failed (A2)"
+  },
+  "S3": {
+   "cat": "setup",
+   "name": "EVENT-RETRACE",
+   "def": "A news/event SPIKE fully retraced, then M15 HL (or LH) away from the spike extreme.",
+   "entry": "after the structure forms, never during the spike",
+   "stop": "beyond EVT-X",
+   "target": "the prior swing",
+   "record": "1W +2.55R (post-FOMC gold)"
+  },
+  "S4": {
+   "cat": "setup",
+   "name": "BREAK-ACCEPT",
+   "def": "Breakout with acceptance: price breaks a SHELF or a prior SPIKE extreme and ACCEPTs there (several hours of closes beyond it, no return inside).",
+   "entry": "on the hold",
+   "stop": "back inside, under the shelf / acceptance base",
+   "target": "~2R",
+   "record": "2W (US100 +1.94R, gold +1.97R); 1L on a FLAG box taken without the acceptance"
+  },
+  "A1": {
+   "cat": "anti",
+   "name": "CHASE",
+   "def": "Entering an IMPULSE or SPIKE that already ran 3+ ATR(M15) from its base with no pause, pullback or acceptance. A move that just happened is not A1 by itself: judge it by the setup code it fits (a break that holds is S4, a failed counter-move is S2).",
+   "instead": "ALERT at the RETEST of the breakout base",
+   "record": "3 straight -1R (May 2025)"
+  },
+  "A2": {
+   "cat": "anti",
+   "name": "EARLY-PULLBACK",
+   "def": "Entering a pullback before it printed its HL/LH -- the counter-move is still running.",
+   "instead": "wait for the HL/LH and a closed REJECT bar (S2), or ALERT on T-REJECT",
+   "record": "most of the S1-family losses"
+  },
+  "A3": {
+   "cat": "anti",
+   "name": "PACING",
+   "def": "An entry whose real reason is 'the account needs a traded day', with no setup code matching.",
+   "instead": "a small trade only if a setup code fits; otherwise an ALERT plan",
+   "record": "5 of 13 losses"
+  },
+  "A4": {
+   "cat": "anti",
+   "name": "THIN/GAP",
+   "def": "Thin-hour or rollover entries, or a move that is only a session-open / rollover GAP.",
+   "instead": "DISMISS, or wait for the window's liquid hours",
+   "record": "rollover/thin entries papers"
+  },
+  "A5": {
+   "cat": "anti",
+   "name": "CORRELATED",
+   "def": "One move counted several times (gold in USD and EUR; silver USD/EUR; US100/US500/US30 together; oil WTI/Brent).",
+   "instead": "read one, mark the rest DISMISS A5",
+   "record": "scouts kept re-reading the same move"
+  },
+  "HH": {
+   "cat": "structure",
+   "name": "higher high",
+   "def": "a swing high above the previous swing high"
+  },
+  "HL": {
+   "cat": "structure",
+   "name": "higher low",
+   "def": "a swing low above the previous swing low"
+  },
+  "LH": {
+   "cat": "structure",
+   "name": "lower high",
+   "def": "a swing high below the previous swing high"
+  },
+  "LL": {
+   "cat": "structure",
+   "name": "lower low",
+   "def": "a swing low below the previous swing low"
+  },
+  "BOS": {
+   "cat": "structure",
+   "name": "break of structure",
+   "def": "a close beyond the last swing in the trend direction"
+  },
+  "CHOCH": {
+   "cat": "structure",
+   "name": "change of character",
+   "def": "the first close beyond the last swing AGAINST the trend (first LL in an uptrend, first HH in a downtrend)"
+  },
+  "IMPULSE": {
+   "cat": "structure",
+   "name": "impulse",
+   "def": "consecutive same-direction bars with ranges well above the recent average, little overlap"
+  },
+  "PULLBACK": {
+   "cat": "structure",
+   "name": "pullback",
+   "def": "a counter-move inside a trend that has not broken the last HL/LH"
+  },
+  "CONSOL": {
+   "cat": "structure",
+   "name": "consolidation",
+   "def": "overlapping bars in a tight band after a move; the band's high/low are its edges"
+  },
+  "FLAG": {
+   "cat": "structure",
+   "name": "flag",
+   "def": "a small counter-sloped CONSOL after an IMPULSE"
+  },
+  "SHELF": {
+   "cat": "structure",
+   "name": "shelf",
+   "def": "a flat area with several equal highs (or lows) acting as a ceiling (floor)"
+  },
+  "SPIKE": {
+   "cat": "structure",
+   "name": "spike",
+   "def": "one or two outsized bars, often news; EVT-X is its extreme"
+  },
+  "SWEEP": {
+   "cat": "structure",
+   "name": "liquidity sweep",
+   "def": "a wick beyond an obvious level (PDH, SWING-H, RANGE-H) that closes back inside"
+  },
+  "ACCEPT": {
+   "cat": "structure",
+   "name": "acceptance",
+   "def": "closes beyond a level held for N bars (write ACCEPT>level tf xN)"
+  },
+  "REJECT": {
+   "cat": "structure",
+   "name": "rejection",
+   "def": "a bar that trades through a level and closes back on the original side"
+  },
+  "RETEST": {
+   "cat": "structure",
+   "name": "retest",
+   "def": "price returning to a broken level from the new side"
+  },
+  "GAP": {
+   "cat": "structure",
+   "name": "gap",
+   "def": "the open far from the previous close: session open, rollover, weekend, news"
+  },
+  "TREND-UP": {
+   "cat": "state",
+   "name": "uptrend",
+   "def": "H1 (or the tf named) prints HH and HL; price above the last HL"
+  },
+  "TREND-DN": {
+   "cat": "state",
+   "name": "downtrend",
+   "def": "H1 (or the tf named) prints LH and LL; price below the last LH"
+  },
+  "RANGE": {
+   "cat": "state",
+   "name": "range",
+   "def": "price oscillating between a RANGE-H and RANGE-L for several swings"
+  },
+  "CHOP": {
+   "cat": "state",
+   "name": "chop",
+   "def": "overlapping bars, no clean swings, no edge"
+  },
+  "EXHAUSTED": {
+   "cat": "state",
+   "name": "exhausted",
+   "def": "a move 3+ ATR(M15) from its base without a pullback; continuation entries here are A1"
+  },
+  "SWING-H": {
+   "cat": "level",
+   "name": "swing high",
+   "def": "a bar high with lower highs on both sides (state the tf)"
+  },
+  "SWING-L": {
+   "cat": "level",
+   "name": "swing low",
+   "def": "a bar low with higher lows on both sides (state the tf)"
+  },
+  "RANGE-H": {
+   "cat": "level",
+   "name": "range high",
+   "def": "the top of a RANGE"
+  },
+  "RANGE-L": {
+   "cat": "level",
+   "name": "range low",
+   "def": "the bottom of a RANGE"
+  },
+  "PDH": {
+   "cat": "level",
+   "name": "prior day high",
+   "def": "the previous Prague trading day's high"
+  },
+  "PDL": {
+   "cat": "level",
+   "name": "prior day low",
+   "def": "the previous Prague trading day's low"
+  },
+  "ASIA-H": {
+   "cat": "level",
+   "name": "Asia high",
+   "def": "the high of 00:00-07:00 Madrid"
+  },
+  "ASIA-L": {
+   "cat": "level",
+   "name": "Asia low",
+   "def": "the low of 00:00-07:00 Madrid"
+  },
+  "RN": {
+   "cat": "level",
+   "name": "round number",
+   "def": "a price ending in 00/50 (or 000/500 on indices)"
+  },
+  "EVT-X": {
+   "cat": "level",
+   "name": "event extreme",
+   "def": "the far end of a news SPIKE"
+  },
+  "T-TOUCH": {
+   "cat": "trigger",
+   "name": "touch",
+   "def": "any trade at the level -- paper.py alert --when touch (refused next to price: that is a poll)"
+  },
+  "T-CLOSE": {
+   "cat": "trigger",
+   "name": "close beyond",
+   "def": "a closed bar of the named tf beyond the level: T-CLOSE>3302 M15 -- paper.py alert --when close --tf M15"
+  },
+  "T-HOLD": {
+   "cat": "trigger",
+   "name": "hold",
+   "def": "N consecutive closes beyond the level: T-HOLD 3300 M15x2 -- paper.py alert --when hold --tf M15 --bars 2"
+  },
+  "T-REJECT": {
+   "cat": "trigger",
+   "name": "rejection trigger",
+   "def": "a bar through the level that closes back: T-REJECT 3290 M5 -- paper.py alert --when reject --tf M5"
+  },
+  "INV": {
+   "cat": "plan",
+   "name": "invalidation",
+   "def": "the condition that kills the plan: INV H1<3290 (a close of that tf beyond it)"
+  },
+  "DISMISS": {
+   "cat": "verdict",
+   "name": "dismiss",
+   "def": "nothing to do; give the code(s) why (A1-A5, CHOP, GAP, EXHAUSTED)"
+  },
+  "NOW": {
+   "cat": "verdict",
+   "name": "trade now",
+   "def": "a clean entry right now: hand to the trader with CODE SIDE SL TP"
+  },
+  "ALERT": {
+   "cat": "verdict",
+   "name": "alert",
+   "def": "a real setup whose entry is still to come: paper.py alert at the level, plan in the grammar"
+  },
+  "WATCH": {
+   "cat": "verdict",
+   "name": "watch",
+   "def": "forming but not plannable yet; post it so the next scout or decision turn starts from it"
+  },
+  "R": {
+   "cat": "risk",
+   "name": "R",
+   "def": "the entry-to-stop distance; 2R = a target twice that far"
+  },
+  "BE": {
+   "cat": "risk",
+   "name": "break-even",
+   "def": "stop moved to the entry price"
+  },
+  "SL@S": {
+   "cat": "risk",
+   "name": "stop at structure",
+   "def": "a stop placed beyond a named structure level, never an arbitrary distance"
+  }
+ }
+}

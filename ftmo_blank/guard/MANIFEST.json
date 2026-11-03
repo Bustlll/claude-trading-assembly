@@ -1,0 +1,9 @@
+{
+ "hashes": {
+  "__init__.py": "783dc7bc713dee202c702f2b63857bb8638abafc9c3eef2192035478cd82e1ab",
+  "instruments.json": "3c99a17d77faf9d272b31468c8491bee95a15228d4e4dff42231a9e4d511a06a",
+  "policy.py": "be5de35cc324102414a5e04396fc59f69b28f28f0159dfa55191890abbc76f7f",
+  "rules.py": "661ebd7e7a064a8fbe387e200c26b6160a8e215514d66d07c65325996eb7be26"
+ },
+ "written": "2026-10-20T00:45:41"
+}

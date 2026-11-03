@@ -1,0 +1,310 @@
+{
+ "AUDJPY": {
+  "max": 0.193,
+  "median": 0.008,
+  "n_bars": 4032,
+  "n_rollover_bars": 320,
+  "p90": 0.011,
+  "rollover_max": 0.193,
+  "rollover_p95": 0.17105
+ },
+ "AUDNZD": {
+  "max": 0.00312,
+  "median": 6e-05,
+  "n_bars": 4032,
+  "n_rollover_bars": 322,
+  "p90": 0.00012,
+  "rollover_max": 0.00312,
+  "rollover_p95": 0.0026275
+ },
+ "AUDUSD": {
+  "max": 0.00105,
+  "median": 2e-05,
+  "n_bars": 4032,
+  "n_rollover_bars": 317,
+  "p90": 3e-05,
+  "rollover_max": 0.00105,
+  "rollover_p95": 0.00064
+ },
+ "CADJPY": {
+  "max": 0.134,
+  "median": 0.007,
+  "n_bars": 4032,
+  "n_rollover_bars": 318,
+  "p90": 0.01,
+  "rollover_max": 0.134,
+  "rollover_p95": 0.134
+ },
+ "CHFJPY": {
+  "max": 0.401,
+  "median": 0.013,
+  "n_bars": 4032,
+  "n_rollover_bars": 322,
+  "p90": 0.019,
+  "rollover_max": 0.401,
+  "rollover_p95": 0.401
+ },
+ "ETHUSD": {
+  "max": 0.6,
+  "median": 0.6,
+  "n_bars": 4032,
+  "n_rollover_bars": 298,
+  "p90": 0.6,
+  "rollover_max": 0.6,
+  "rollover_p95": 0.6
+ },
+ "EURAUD": {
+  "max": 0.00257,
+  "median": 5e-05,
+  "n_bars": 4032,
+  "n_rollover_bars": 322,
+  "p90": 9e-05,
+  "rollover_max": 0.00257,
+  "rollover_p95": 0.0022
+ },
+ "EURGBP": {
+  "max": 0.00113,
+  "median": 4e-05,
+  "n_bars": 4032,
+  "n_rollover_bars": 321,
+  "p90": 6e-05,
+  "rollover_max": 0.00113,
+  "rollover_p95": 0.00075
+ },
+ "EURJPY": {
+  "max": 0.286,
+  "median": 0.009,
+  "n_bars": 4032,
+  "n_rollover_bars": 321,
+  "p90": 0.012,
+  "rollover_max": 0.286,
+  "rollover_p95": 0.207
+ },
+ "EURUSD": {
+  "max": 0.00084,
+  "median": 0.0,
+  "n_bars": 4032,
+  "n_rollover_bars": 319,
+  "p90": 1e-05,
+  "raw_spread": true,
+  "rollover_max": 0.00084,
+  "rollover_p95": 0.000661
+ },
+ "GBPJPY": {
+  "max": 0.305,
+  "median": 0.015,
+  "n_bars": 4032,
+  "n_rollover_bars": 322,
+  "p90": 0.02,
+  "rollover_max": 0.305,
+  "rollover_p95": 0.258
+ },
+ "GBPUSD": {
+  "max": 0.0016,
+  "median": 2e-05,
+  "n_bars": 4032,
+  "n_rollover_bars": 313,
+  "p90": 4e-05,
+  "rollover_max": 0.0016,
+  "rollover_p95": 0.000994
+ },
+ "GER40.cash": {
+  "max": 3.79,
+  "median": 1.73,
+  "n_bars": 4032,
+  "n_rollover_bars": 165,
+  "p90": 3.19,
+  "rollover_max": 3.79,
+  "rollover_p95": 3.67
+ },
+ "NZDUSD": {
+  "max": 0.00125,
+  "median": 3e-05,
+  "n_bars": 4032,
+  "n_rollover_bars": 315,
+  "p90": 5e-05,
+  "rollover_max": 0.00125,
+  "rollover_p95": 0.000723
+ },
+ "UK100.cash": {
+  "max": 6.11,
+  "median": 1.55,
+  "n_bars": 4032,
+  "n_rollover_bars": 165,
+  "p90": 4.346,
+  "rollover_max": 6.11,
+  "rollover_p95": 6.09
+ },
+ "UKOIL.cash": {
+  "max": 0.08,
+  "median": 0.07,
+  "n_bars": 4032,
+  "n_rollover_bars": 0,
+  "p90": 0.077,
+  "rollover_max": null,
+  "rollover_p95": null
+ },
+ "US100.cash": {
+  "max": 2.13,
+  "median": 1.45,
+  "n_bars": 4032,
+  "n_rollover_bars": 165,
+  "p90": 1.65,
+  "rollover_max": 2.13,
+  "rollover_p95": 1.83
+ },
+ "US30.cash": {
+  "max": 2.93,
+  "median": 2.38,
+  "n_bars": 4032,
+  "n_rollover_bars": 165,
+  "p90": 2.53,
+  "rollover_max": 2.93,
+  "rollover_p95": 2.91
+ },
+ "US500.cash": {
+  "max": 0.63,
+  "median": 0.6,
+  "n_bars": 4032,
+  "n_rollover_bars": 165,
+  "p90": 0.6,
+  "rollover_max": 0.63,
+  "rollover_p95": 0.6
+ },
+ "USDCAD": {
+  "max": 0.00156,
+  "median": 3e-05,
+  "n_bars": 4032,
+  "n_rollover_bars": 317,
+  "p90": 5e-05,
+  "rollover_max": 0.00156,
+  "rollover_p95": 0.001064
+ },
+ "USDCHF": {
+  "max": 0.002,
+  "median": 4e-05,
+  "n_bars": 4032,
+  "n_rollover_bars": 315,
+  "p90": 6e-05,
+  "rollover_max": 0.002,
+  "rollover_p95": 0.001413
+ },
+ "USDCNH": {
+  "max": 0.00735,
+  "median": 0.00057,
+  "n_bars": 4032,
+  "n_rollover_bars": 308,
+  "p90": 0.00086,
+  "rollover_max": 0.00735,
+  "rollover_p95": 0.00426
+ },
+ "USDJPY": {
+  "max": 0.17,
+  "median": 0.003,
+  "n_bars": 4032,
+  "n_rollover_bars": 313,
+  "p90": 0.005,
+  "rollover_max": 0.17,
+  "rollover_p95": 0.1044
+ },
+ "USDMXN": {
+  "max": 0.0695,
+  "median": 0.00467,
+  "n_bars": 4032,
+  "n_rollover_bars": 300,
+  "p90": 0.00647,
+  "rollover_max": 0.0695,
+  "rollover_p95": 0.041283
+ },
+ "USDSGD": {
+  "max": 0.00362,
+  "median": 0.00026,
+  "n_bars": 4032,
+  "n_rollover_bars": 294,
+  "p90": 0.00028,
+  "rollover_max": 0.00362,
+  "rollover_p95": 0.00312
+ },
+ "USDZAR": {
+  "max": 0.11689,
+  "median": 0.00968,
+  "n_bars": 4032,
+  "n_rollover_bars": 279,
+  "p90": 0.02126,
+  "rollover_max": 0.11689,
+  "rollover_p95": 0.08661
+ },
+ "USOIL.cash": {
+  "max": 0.09,
+  "median": 0.076,
+  "n_bars": 4032,
+  "n_rollover_bars": 165,
+  "p90": 0.084,
+  "rollover_max": 0.09,
+  "rollover_p95": 0.079
+ },
+ "XAGEUR": {
+  "max": 0.066,
+  "median": 0.037,
+  "n_bars": 4032,
+  "n_rollover_bars": 165,
+  "p90": 0.048,
+  "rollover_max": 0.055,
+  "rollover_p95": 0.053
+ },
+ "XAGUSD": {
+  "max": 0.074,
+  "median": 0.042,
+  "n_bars": 4032,
+  "n_rollover_bars": 165,
+  "p90": 0.055,
+  "rollover_max": 0.064,
+  "rollover_p95": 0.061
+ },
+ "XAUEUR": {
+  "max": 0.81,
+  "median": 0.53,
+  "n_bars": 4032,
+  "n_rollover_bars": 165,
+  "p90": 0.61,
+  "rollover_max": 0.71,
+  "rollover_p95": 0.7
+ },
+ "XAUUSD": {
+  "max": 0.53,
+  "median": 0.36,
+  "n_bars": 4032,
+  "n_rollover_bars": 165,
+  "p90": 0.45,
+  "rollover_max": 0.53,
+  "rollover_p95": 0.53
+ },
+ "XCUUSD": {
+  "max": 0.69,
+  "median": 0.57,
+  "n_bars": 4032,
+  "n_rollover_bars": 165,
+  "p90": 0.64,
+  "rollover_max": 0.69,
+  "rollover_p95": 0.59
+ },
+ "XPDUSD": {
+  "max": 9.66,
+  "median": 6.72,
+  "n_bars": 4032,
+  "n_rollover_bars": 163,
+  "p90": 7.27,
+  "rollover_max": 9.05,
+  "rollover_p95": 7.78
+ },
+ "XPTUSD": {
+  "max": 9.13,
+  "median": 5.84,
+  "n_bars": 4032,
+  "n_rollover_bars": 165,
+  "p90": 7.32,
+  "rollover_max": 8.64,
+  "rollover_p95": 8.108
+ },
+ "_about": "Each instrument's spread in PRICE units, measured from the broker's own five-minute bars over about 14 calendar days: median = the typical spread; p90; max; rollover_p95 / rollover_max = the spread in the 2 hours after the daily rollover (17:00 New York), when it spikes. raw_spread = a commission-account major whose bar spread reads ~0 (use the table's figure)."
+}

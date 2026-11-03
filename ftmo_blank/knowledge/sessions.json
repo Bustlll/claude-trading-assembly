@@ -1,0 +1,12 @@
+{
+ "source": "deltaforce/live/ftmo_session.py (header comments and constants), memory notes, OOSLAB_DESIGN.md",
+ "base_clock": "M5 (five-minute bars), broker server time, UTC+3. Mirrors the project's own 5m cache (offline_trainer_ooslabXspeed/OOSLAB_DESIGN.md). H1/H4/D1 are DERIVED by resampling, not downloaded.",
+ "friday_force_close": "Friday >= 21:00 UTC (ftmo_session.py:7). The replay flattens every open position on the last bar before a weekend gap (no position holds over the weekend; operator's rule).",
+ "swap_window_utc": "21:55-22:10 UTC is the guarded swap-spike window (ftmo_session.py:27)",
+ "server_midnight_rollover_utc": "20:55-21:10 UTC is the real server-midnight rollover (ftmo_session.py:27)",
+ "daily_reset": "FTMO daily limit resets 00:00 CE(S)T (field/ftmo_rules_gaps.md, settled from ftmo.com)",
+ "broker_clock": "feed stamps are broker server time, UTC+3 (field/candles_and_clock.md)",
+ "night_tag": "bars tagged 'night' are 22:00-07:00 Prague local time. Trading at night is enabled (operator's rule).",
+ "news": "DeltaForce has a calendar daemon (deltaforce/live/ftmo_calendar_daemon.py). Replay has no news feed.",
+ "weekends": "No weekend trading: the broker flattens before every weekend gap, and windows are built from business days only (Mon-Fri), so a window never includes a weekend."
+}
